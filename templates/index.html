@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>BlueMusic</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        ALOOO
+        <a href='/'>
+            <img src="{{url_for ('static', filename='minilogo.png') }}" alt="">
+        </a>
+
+        <ul>
+            <a><li>Ouvir</li></a>
+            <a><li>Nova música</li></a>
+        </ul>
+    </nav>
+
+    <header id="banner">
+        <div>
+            <h1>O que você ouve enquanto programa?</h1>
+            <h2>Crie aqui sua própria playlist</h2>
+        </div>
+
+        <img src="{{url_for ('static',filename='img/img-home.png') }}" alt="">
+    </header>
+    <section id="playlist">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Artista</th>
+                    <th>Player</th>
+                    <th>Açoes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Teste</td>
+                    <td>Teste</td>
+                    <td>
+                        <audio controls src=""></audio>
+                    </td>
+                    <td>
+                        <a href="">Editar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
