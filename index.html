@@ -10,14 +10,17 @@
 </head>
 <body>
     <nav>
-        
+        <img src="static/img/minilogo.png">
         <a href='/'>
             <img src="{{url_for ('static', filename='minilogo.png') }}" alt="">
         </a>
-
         <ul>
-            <a><li>Ouvir</li></a>
-            <a><li>Nova música</li></a>
+            <li>
+                <a>Ouvir</a>
+            </li>
+            <li>
+                <a>Nova música</a>
+            </li>
         </ul>
     </nav>
 
@@ -27,10 +30,11 @@
             <h2>Crie aqui sua própria playlist</h2>
         </div>
 
-        <img src="{{url_for ('static',filename='img/img-home.png') }}" alt="">
+        <img src="static/img/img-home.png" alt="">
     </header>
+    
     <section id="playlist">
-
+        <h1>Playlist</h1>
         <table>
             <thead>
                 <tr>
@@ -44,17 +48,26 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>Teste</td>
-                    <td>Teste</td>
+                    <td>{{musica.nome}}</td>
+                    <td>{{musica.artista}}</td>
                     <td>
-                        <audio controls src=""></audio>
+                        <audio controls src="{{musica.link}}"></audio>
                     </td>
                     <td>
                         <a href="">Editar</a>
+                    </td>
+                    <td>
+                        <a href="">Apagar</a>
                     </td>
                 </tr>
             </tbody>
         </table>
     </section>
+    <footer>
+        <hr>
+        <p>Todos os direitos reservados.
+            <a href="https://github.com/Thialves02" target="_blank">Thiago Roberto</a>
+        </p>
+    </footer>
 </body>
 </html>
